@@ -1,5 +1,5 @@
 import { client } from "@/app/client"
-import { ConnectButton } from "thirdweb/react"
+import { ConnectButton, lightTheme } from "thirdweb/react"
 
 export default function Navbar() {
   return (
@@ -8,7 +8,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-4">
           <div className="text-2xl font-bold">NFT Project</div>
           {/*<Button>Connect Wallet</Button>*/}
-          <ConnectButton client={client} />
+          <ConnectButton client={client} 
+          theme={lightTheme()}
+          connectButton={{
+            label: "Connect wallet"
+          }}/>
         </div>
       </div>
     </nav>
